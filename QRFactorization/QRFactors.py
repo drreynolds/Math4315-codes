@@ -28,14 +28,8 @@ def QRFactors(A):
     Q = numpy.identity(m)
     R = A.copy()
 
-    # determine elimination extent
-    if (m==n):
-        kend = n-1
-    else:
-        kend = n
-
     # iterate over columns
-    for k in range(kend):
+    for k in range(n):
 
         # extract subvector from diagonal down and compute norm
         z = R[k:m,k]

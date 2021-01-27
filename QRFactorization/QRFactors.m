@@ -21,15 +21,8 @@ function [Q,R] = QRFactors(A)
 Q = eye(m);
 R = A;
 
-% determine elimination extent
-if (m==n)
-   kend = n-1;
-else
-   kend = n;
-end
-
 % iterate over columns
-for k=1:kend
+for k=1:n
 
   % extract subvector from diagonal down and compute norm
   z = R(k:m,k);
