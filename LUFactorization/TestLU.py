@@ -62,10 +62,10 @@ for n in nvals:
   if (numpy.linalg.norm(U - numpy.triu(U))>tol):
     checks_out = False
     print("  LUPFactors failure: U is not upper-triangular")
-  if (numpy.linalg.norm(numpy.transpose(P)@P - numpy.eye(n))>tol):
+  if (numpy.linalg.norm(P.T@P - numpy.eye(n))>tol):
     checks_out = False
     print("  LUPFactors failure: P is not a permutation matrix")
-  if (numpy.linalg.norm(A-numpy.transpose(P)@L@U)>tol):
+  if (numpy.linalg.norm(A-P.T@L@U)>tol):
     checks_out = False
     print("  LUPFactors failure: A ~= P^T L U")
   if (checks_out):

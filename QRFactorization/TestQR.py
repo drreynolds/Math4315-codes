@@ -26,8 +26,8 @@ for n in nvals:
     Q, R = QRFactors(A)
 
     # output results
-    print("   ||I-Q^TQ||     = ", numpy.linalg.norm(I-numpy.transpose(Q)@Q,2))
-    print("   ||I-QQ^T||     = ", numpy.linalg.norm(I-Q@numpy.transpose(Q),2))
+    print("   ||I-Q^TQ||     = ", numpy.linalg.norm(I-Q.T@Q,2))
+    print("   ||I-QQ^T||     = ", numpy.linalg.norm(I-Q@Q.T,2))
     print("   ||A-QR||       = ", numpy.linalg.norm(A-Q@R,2))
     print("   ||tril(R,-1)|| = ", numpy.linalg.norm(numpy.tril(R,-1),2))
 
@@ -44,8 +44,8 @@ for n in nvals:
     Q, R = QRFactors(A)
 
     # output results
-    print("   ||I-Q^TQ||     = ", numpy.linalg.norm(I-numpy.transpose(Q)@Q,2))
-    print("   ||I-QQ^T||     = ", numpy.linalg.norm(I-Q@numpy.transpose(Q),2))
+    print("   ||I-Q^TQ||     = ", numpy.linalg.norm(I-Q.T@Q,2))
+    print("   ||I-QQ^T||     = ", numpy.linalg.norm(I-Q@Q.T,2))
     print("   ||A-QR||       = ", numpy.linalg.norm(A-Q@R,2))
     print("   ||tril(R,-1)|| = ", numpy.linalg.norm(numpy.tril(R,-1),2))
 
@@ -63,8 +63,8 @@ for n in nvals:
     Q, R = QRFactors(A)
 
     # output results
-    print("   ||I-Q^TQ||     = ", numpy.linalg.norm(I-numpy.transpose(Q)@Q,2))
-    print("   ||I-QQ^T||     = ", numpy.linalg.norm(I-Q@numpy.transpose(Q),2))
+    print("   ||I-Q^TQ||     = ", numpy.linalg.norm(I-Q.T@Q,2))
+    print("   ||I-QQ^T||     = ", numpy.linalg.norm(I-Q@Q.T,2))
     print("   ||A-QR||       = ", numpy.linalg.norm(A-Q@R,2))
     print("   ||tril(R,-1)|| = ", numpy.linalg.norm(numpy.tril(R,-1),2))
 
@@ -81,8 +81,8 @@ for n in nvals:
     Q, R = QRFactors(A)
 
     # output results
-    print("   ||I-Q^TQ||     = ", numpy.linalg.norm(I-numpy.transpose(Q)@Q,2))
-    print("   ||I-QQ^T||     = ", numpy.linalg.norm(I-Q@numpy.transpose(Q),2))
+    print("   ||I-Q^TQ||     = ", numpy.linalg.norm(I-Q.T@Q,2))
+    print("   ||I-QQ^T||     = ", numpy.linalg.norm(I-Q@Q.T,2))
     print("   ||A-QR||       = ", numpy.linalg.norm(A-Q@R,2))
     print("   ||tril(R,-1)|| = ", numpy.linalg.norm(numpy.tril(R,-1),2))
 

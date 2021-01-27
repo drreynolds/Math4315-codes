@@ -53,16 +53,16 @@ def QRFactors(A):
 
         # update rows k through m of R
         for j in range(n):
-            utR = 2 * numpy.transpose(u) @ R[k:m, j]
+            utR = 2 * u.T @ R[k:m, j]
             R[k:m, j] -= u*utR
 
         # update rows k through m of Q
         for j in range(m):
-            utQ = 2 * numpy.transpose(u) @ Q[k:m, j]
+            utQ = 2 * u.T @ Q[k:m, j]
             Q[k:m, j] -= u*utQ
 
     # transpose Q before return
-    Q = numpy.transpose(Q)
+    Q = Q.T
 
     return [Q, R]
 
