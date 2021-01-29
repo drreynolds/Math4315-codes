@@ -42,7 +42,7 @@ for n in nvals:
     print("  LUFactors passes all tests")
 
 
-# tests for nonsingular (but non-diagonally0-dominant) matrices
+# tests for nonsingular (but non-diagonally-dominant) matrices
 for n in nvals:
 
   print("Testing LUPFactors with non-diagonally-dominant matrix of dimension ", n)
