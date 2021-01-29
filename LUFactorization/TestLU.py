@@ -37,7 +37,7 @@ for n in nvals:
     print("  LUFactors failure: U is not upper-triangular")
   if (numpy.linalg.norm(A-L@U)>tol):
     checks_out = False
-    print("  LUFactors failure: A ~= LU")
+    print("  LUFactors failure: A != LU")
   if (checks_out):
     print("  LUFactors passes all tests")
 
