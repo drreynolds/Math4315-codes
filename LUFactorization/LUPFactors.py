@@ -9,7 +9,7 @@ import numpy
 
 def LUPFactors(A):
     """
-    usage: [L,U,P] = LUPFactors(A)
+    usage: L, U, P = LUPFactors(A)
 
     Row-oriented LU factorization with partial pivoting; constructs the factorization
           P A = LU  <=>  A = P^T L U
