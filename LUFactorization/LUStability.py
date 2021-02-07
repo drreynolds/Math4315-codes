@@ -28,28 +28,20 @@ for n in nvals:
   randcols = numpy.random.randint(0,n-1,n2)
   A[randrows,:] = numpy.diag(1000*numpy.random.rand(n2))@A[randrows,:]
   A[:,randcols] = A[:,randcols]@numpy.diag(1000*numpy.random.rand(n2))
-  x = numpy.random.rand(n,1)
-  b = A@x
 
   # test LUPFactors_simple
   print("  LUPFactors_simple:")
   L, U, P = LUPFactors_simple(A)
   print("    norm(A - P^T L U) = ", numpy.linalg.norm(A - P.T@L@U))
-  x_comp = numpy.linalg.solve(U,numpy.linalg.solve(L,P@b))
-  print("    norm(x - x_comp) = ", numpy.linalg.norm(x - x_comp))
 
   # test LUPFactors
   print("  LUPFactors:")
   L, U, P = LUPFactors(A)
   print("    norm(A - P^T L U) = ", numpy.linalg.norm(A - P.T@L@U))
-  x_comp = numpy.linalg.solve(U,numpy.linalg.solve(L,P@b))
-  print("    norm(x - x_comp) = ", numpy.linalg.norm(x - x_comp))
 
   # test LUPPFactors
   print("  LUPPFactors:")
   L, U, P1, P2 = LUPPFactors(A)
   print("    norm(A - P1^T L U P2^T) = ", numpy.linalg.norm(A - P1.T@L@U@P2.T))
-  x_comp = P2@(numpy.linalg.solve(U,numpy.linalg.solve(L,P1@b)))
-  print("    norm(x - x_comp) = ", numpy.linalg.norm(x - x_comp))
 
 # end of script
