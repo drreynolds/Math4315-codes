@@ -9,6 +9,7 @@
 
 # imports
 import numpy
+import time
 from LUPFactors_simple import LUPFactors_simple
 from LUPFactors import LUPFactors
 from LUPPFactors import LUPPFactors
@@ -31,17 +32,23 @@ for n in nvals:
 
   # test LUPFactors_simple
   print("  LUPFactors_simple:")
+  ts = time.time()
   L, U, P = LUPFactors_simple(A)
+  print("    runtime = ", time.time()-ts)
   print("    norm(A - P^T L U) = ", numpy.linalg.norm(A - P.T@L@U))
 
   # test LUPFactors
   print("  LUPFactors:")
+  ts = time.time()
   L, U, P = LUPFactors(A)
+  print("    runtime = ", time.time()-ts)
   print("    norm(A - P^T L U) = ", numpy.linalg.norm(A - P.T@L@U))
 
   # test LUPPFactors
   print("  LUPPFactors:")
+  ts = time.time()
   L, U, P1, P2 = LUPPFactors(A)
+  print("    runtime = ", time.time()-ts)
   print("    norm(A - P1^T L U P2^T) = ", numpy.linalg.norm(A - P1.T@L@U@P2.T))
 
 # end of script

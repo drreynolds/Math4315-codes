@@ -24,17 +24,23 @@ for n = nvals
 
    % test LUPFactors_simple
    fprintf('  LUPFactors_simple:\n');
+   ts = tic;
    [L,U,P] = LUPFactors_simple(A);
+   fprintf('    runtime = %g\n', toc(ts))
    fprintf('    norm(A - P^T L U) = %9.2e\n', norm(A - P'*L*U));
 
    % test LUPFactors
    fprintf('  LUPFactors:\n');
+   ts = tic;
    [L,U,P] = LUPFactors(A);
+   fprintf('    runtime = %g\n', toc(ts))
    fprintf('    norm(A - P^T L U) = %9.2e\n', norm(A - P'*L*U));
 
    % test LUPPFactors
    fprintf('  LUPPFactors:\n');
+   ts = tic;
    [L,U,P1,P2] = LUPPFactors(A);
+   fprintf('    runtime = %g\n', toc(ts))
    fprintf('    norm(A - P1^T L U P2^T) = %9.2e\n', norm(A - P1'*L*U*P2'));
 
 end
