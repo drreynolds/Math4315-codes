@@ -36,7 +36,7 @@ function [L,U,P] = LUPFactors_simple(A)
     if (abs(U(k,k)) < tol)      % check for 'zero' pivot
       s=k;                      % find first 'nonzero' pivot
       for i = k+1:n
-        if (abs(U(i,k)) > abs(U(s,k)))
+        if (abs(U(i,k)) > tol)
           s = i;
           break
         end
