@@ -23,7 +23,7 @@ b = 4
 # create evaluation points for plots
 x = numpy.linspace(a,b,201)
 
-# initialize plot
+# initialize plots
 plt.figure(1)
 plt.plot(x, f(x), label="$f(x)$")
 
@@ -46,12 +46,23 @@ for n in nvals:
    plt.figure(1)
    plt.plot(x, p, label=("$p_{%i}(x)$, error = %.2e" % (n,err)) )
 
-# finalize plot
+   # add error to plot
+   plt.figure(2)
+   plt.semilogy(x, numpy.abs(f(x)-p), label=("$|f(x)-p_{%i}(x)|$" % (n)) )
+
+
+# finalize plots
 plt.figure(1)
 plt.xlabel("$x$")
 plt.ylabel("$f(x)$, $p(x)$")
 plt.legend()
-plt.title("Linear Spline Interpolant Demo")
+plt.title("Linear Spline Interpolants")
+
+plt.figure(2)
+plt.xlabel("$x$")
+plt.ylabel("$|f(x) - p(x)|$")
+plt.legend()
+plt.title("Linear Spline Error")
 plt.show()
 
 # end of script

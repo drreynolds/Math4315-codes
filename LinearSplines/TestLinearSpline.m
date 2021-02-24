@@ -16,9 +16,12 @@ b = 4;
 % create evaluation points for plots
 x = linspace(a,b,201);
 
-% initialize plot
+% initialize plots
 figure(1)
-plot(x, f(x), 'DisplayName', 'f(x)'), hold on
+plot(x, f(x), 'DisplayName', 'f(x)')
+hold on
+figure(2)
+hold on
 
 % loop over node numbers
 for n = nvals
@@ -39,12 +42,24 @@ for n = nvals
    figure(1)
    plot(x, p, 'DisplayName', sprintf('p_{%i}(x), error = %.2e',n,err))
 
+   % add error to plot
+   figure(2)
+   plot(x, abs(f(x)-p), 'DisplayName', sprintf('|f(x) - p_{%i}(x)|',n))
+
 end
 
-% finalize plot
+% finalize plots
 figure(1)
 hold off
 xlabel('x')
 ylabel('f(x), p(x)')
 legend('Location','Northwest')
-title('Linear Spline Interpolant Demo')
+title('Linear Spline Interpolants')
+
+figure(2)
+hold off
+set(gca,'YScale','log')
+xlabel('x')
+ylabel('|f(x)-p(x)|')
+legend('Location','Northwest')
+title('Linear Spline Error')
