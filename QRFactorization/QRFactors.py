@@ -46,7 +46,7 @@ def QRFactors(A):
         u = v/vnorm
 
         # update rows k through m of R
-        for j in range(n):
+        for j in range(k,n):
             utR = 2 * u.T @ R[k:m, j]
             R[k:m, j] -= u*utR
 

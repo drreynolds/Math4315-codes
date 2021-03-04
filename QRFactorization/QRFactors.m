@@ -40,7 +40,7 @@ for k=1:n
   u = v/vnorm;
 
   % update rows k through m of R
-  for j=1:n
+  for j=k:n
     utR = 2*u'*R(k:m,j);
     R(k:m,j) = R(k:m,j) - u*utR;
   end
