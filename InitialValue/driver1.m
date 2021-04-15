@@ -8,8 +8,8 @@
 clear
 
 % ODE RHS and derivatives, initial condition, etc.
-f   = @(t,u,p) (u+t.^2-2)./(t+1);
-f_u = @(t,u,p) 1/(t+1);
+f   = @(t,u) (u+t.^2-2)./(t+1);
+f_u = @(t,u) 1/(t+1);
 utrue = @(t) t.^2 + 2*t + 2 - 2*(t+1).*log(t+1);
 u0  = 2;
 t0  = 0;
