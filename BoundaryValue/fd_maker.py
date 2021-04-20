@@ -69,7 +69,7 @@ def fd_maker(stencil, deriv):
             errorterm = err[i]
             break
 
-    return [c, errorterm]
+    return [c.T, errorterm]
 
 
 # end of file
