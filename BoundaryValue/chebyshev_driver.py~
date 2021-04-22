@@ -3,7 +3,7 @@
 # Demo to show Chebyshev collocation method for BVP
 #     u'' + (1/(2+x)) u' + (11x/(2+x)) u = (-e^x (12x^3 + 7x^2 + 1))/(2+x), -1<x<1
 #     u(-1) = u(1) = 0
-# using various mesh sizes.
+# using various uniform mesh sizes.
 #
 # Daniel R. Reynolds
 # SMU Mathematics
