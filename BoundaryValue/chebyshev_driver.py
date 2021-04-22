@@ -109,6 +109,3 @@ plt.title('Chebyshev Approximation Error')
 plt.show()
 
 # end of script
-
-
-# end of script

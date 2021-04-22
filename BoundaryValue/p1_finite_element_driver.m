@@ -1,6 +1,6 @@
 % Demo to show piecewise linear finite element solver for BVP
 %     [(2+x) u']' + 11xu = -e^x (12x^3 + 7x^2 + 1), -1<x<1
-%     u(-1)=u(1)=0
+%     u(-1) = u(1) = 0
 % using various non-uniform meshes.
 %
 % Daniel R. Reynolds
