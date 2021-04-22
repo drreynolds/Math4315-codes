@@ -81,7 +81,7 @@ set(gca,'YScale','log')
 xlabel('x')
 ylabel('error(x)')
 legend()
-title('Second-order FD Approximations')
+title('Second-order FD Approximation Error')
 
 
 

@@ -81,7 +81,7 @@ set(gca,'YScale','log')
 xlabel('x')
 ylabel('error(x)')
 legend()
-title('Chebyshev Approximations')
+title('Chebyshev Approximation Error')
 
 
 
