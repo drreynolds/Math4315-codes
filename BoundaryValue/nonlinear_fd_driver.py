@@ -15,8 +15,6 @@ import matplotlib.pyplot as plt
 from differentiation_matrix import *
 from newton import *
 
-### main script ###
-
 # set numbers of intervals for tests
 nvals = [10, 20, 40, 80, 160, 320]
 
