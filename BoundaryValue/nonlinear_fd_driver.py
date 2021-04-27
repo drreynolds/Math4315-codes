@@ -48,7 +48,7 @@ for n in nvals:
     def Jphi(u):
         return (6.0*numpy.diag((Dx@u)/u)@Dx - 3.0*numpy.diag(((Dx@u)/u)**2))
     E = numpy.zeros((n-1,n+1),dtype=float)
-    E[:,1:-1] = numpy.eye(n-1);
+    E[:,1:-1] = numpy.eye(n-1)
     def f(u):
         res = numpy.zeros(n+1)
         res[0] = u[0]-alpha
